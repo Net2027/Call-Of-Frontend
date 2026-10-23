@@ -1,0 +1,39 @@
+:root{--bg:#07040f;--card:#120a22;--line:#33205a;--p:#9b4dff;--p2:#c58bff;--deep:#5b21b6;--tx:#f1eaff;--mu:#a99ac8;padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;font-family:Vazirmatn,Tahoma,"Segoe UI",sans-serif;color:var(--tx);min-height:100vh;background:linear-gradient(135deg,#07040f,#150a30,#0a0620,#1b0c3d);background-size:300% 300%;animation:bgm 30s ease infinite}
+@keyframes bgm{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+@keyframes glow{0%,100%{box-shadow:0 0 14px #9b4dff77}50%{box-shadow:0 0 30px #c58bffaa}}
+@keyframes fadeup{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+header{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 16px;background:#0a0618cc;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+header img{height:54px;width:54px;border-radius:14px;object-fit:cover;animation:glow 5s ease-in-out infinite}
+header h1{margin:0;font-size:20px;letter-spacing:2px;background:linear-gradient(90deg,#d8b4fe,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
+header small{color:var(--mu);display:block;font-size:12px}
+nav{display:flex;gap:6px;margin-inline-start:auto;overflow-x:auto;max-width:100%}
+nav button{background:transparent;border:1px solid transparent;color:var(--mu);padding:8px 14px;border-radius:999px;cursor:pointer;font:inherit;white-space:nowrap;font-weight:400}
+nav button.on,nav button:hover{color:#fff;border-color:var(--p);background:#9b4dff22;box-shadow:0 0 12px #9b4dff55;filter:none}
+main{max-width:1000px;margin:0 auto;padding:22px 14px 60px;animation:fadeup .5s}
+h2.t{margin:6px 0 14px;font-size:20px;color:var(--p2)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:linear-gradient(160deg,#1a0e33,var(--card));border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.3s;font-size:13px}
+.card:hover{transform:translateY(-4px);border-color:var(--p);box-shadow:0 0 22px #9b4dff55}
+.card .im{aspect-ratio:4/3;background:#000 center/cover;border-bottom:2px solid var(--p)}
+.card .bd{padding:10px 12px;flex:1}
+.ln{margin:3px 0;line-height:1.6}.ln span{color:var(--p2);font-weight:700}
+.ln.d{color:var(--mu);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-wrap}
+.card button{margin:0 12px 12px;padding:8px}
+button,.btn{font:inherit;cursor:pointer;border:0;border-radius:10px;padding:11px 16px;color:#fff;background:linear-gradient(135deg,var(--p),var(--deep));font-weight:700}
+button:hover,.btn:hover{filter:brightness(1.2)}button.g{background:#1d1136;border:1px solid var(--line)}button.dng{background:#7f1d3a}
+input,textarea,select{width:100%;font:inherit;color:var(--tx);background:#0c0719;border:1px solid var(--line);border-radius:10px;padding:10px;margin:5px 0}
+input:focus,textarea:focus,select:focus{outline:1px solid var(--p)}
+.box{background:#120a22cc;border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px}
+.msgs{height:300px;overflow:auto;display:flex;flex-direction:column;gap:8px;padding:8px;background:#0a0617;border-radius:10px;border:1px solid var(--line)}
+.m{max-width:80%;padding:8px 12px;border-radius:12px;font-size:14px;white-space:pre-wrap;word-break:break-word}
+.m.me{align-self:flex-start;background:#5b21b6}.m.ot{align-self:flex-end;background:#231642}
+.row{display:flex;gap:8px}.row>*{margin:0}.mu{color:var(--mu);font-size:13px}
+.hero{text-align:center;padding:26px 10px 18px}.hero h2{margin:0 0 8px;font-size:26px;text-shadow:0 0 22px var(--p)}
+.ct{display:flex;align-items:center;gap:14px;padding:14px;margin-bottom:10px;border:1px solid var(--line);border-radius:14px;background:#120a22cc;color:var(--tx);text-decoration:none;transition:.25s}
+.ct:hover{border-color:var(--p);box-shadow:0 0 18px #9b4dff55;transform:translateX(-4px)}
+.ic{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:22px;font-weight:700;color:#fff;flex:none}
+@media(max-width:560px){.grid{gap:8px}.card{font-size:11px}.card .bd{padding:6px 7px}.card button{margin:0 7px 7px;padding:6px;font-size:11px}header img{height:44px;width:44px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
