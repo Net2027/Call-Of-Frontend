@@ -1,3 +1,3 @@
 // آدرس بک‌اند (Railway) را اینجا بگذارید؛ بدون / آخر.
 // مثال:  window.CODM_API = "https://codm-production.up.railway.app";
-window.CODM_API = "/api/products";
+window.CODM_API = "call-of-backend-production.up.railway.app";
